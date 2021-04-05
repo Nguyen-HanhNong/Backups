@@ -1,0 +1,71 @@
+<!--Author: Nguyen-Hanh Nong-->
+<!--Program: Survey Form Program-->
+<!--Date of Creation: 3/31/2021-->
+<!--Goal: A program that simulates a survey form including user input and use of radio buttons-->
+<!DOCTYPE html>
+
+<html>
+
+<style>
+#title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color:brown;
+    font-weight: bold;
+}
+</style>
+
+
+    <main id="main">
+        <head>
+            <title>Personal Survey Form</title>
+            <h1 id="title">Nguyen-Hanh's Personal Survey Form</h1>
+        </head>
+        
+        <body>
+            <p id="description">This is a survey form to get to know you a little better. The questions are personal questions and are required to be answered.</p>
+            
+        <!-- Using a form to accept user input--->
+            <form id="survey-form">
+
+                <label for="name" id="name-label">Name:</label><br> <!--Using labels to label the user input and using <br> to introduce linebreak-->
+                <input type="text" placeholder="Enter name" id="name" required><br>
+
+                <label for="email" id="email-label">Email:</label><br> <!--Checking for the email of the user, using type email so its formatted properly -->
+                <input type="email" placeholder="Enter email" id="email" required><br>
+                
+                <label for="number-label" id="number-label">Enter a random number between 0 and 100</label><br> <!--Checking for the user to input a number between 0 and 100. 
+                    Using min and max to get a specified response-->
+                <input type="number" placeholder="Enter number" id="number" min="0" max="100"><br><br>
+
+                <label for="fruit" id="fruit-label">Choose a fruit from the drop-down box</label><br> <!---Creating a drop-down box with different selections of fruit-->
+                <select name="fruit" id="dropdown">
+                    <option value="apple">Apple</option>
+                    <option value="orange">Orange</option>
+                    <option value="pear">Pear</option>
+                    <option value="banana">Banana</option>
+                </select><br><br>
+
+                <label for="gender" id="gender-label">What is your gender?</label><br> <!--Asking for the gender of the user using a series of radiobuttons grouped together-->
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+
+                <label for="assets" id="assets-label">Out of these assets, do you own any of these?</label><br> <!--Using checkboxes to find out the assets of the user-->
+                <input type="checkbox" id="car" name="assets" value="car">
+                <label for="car">Car</label><br>
+                <input type="checkbox" id="house" name="assets" value="house">
+                <label for="house">House</label><br>
+                <input type="checkbox" id="television" name="assets" value="television">
+                <label for="television">Television</label><br><br>
+
+                <label for="additional-comments" id="additional-comments">Do you have any additoinal comments on this survey?</label><br> <!--Creating an area for the user to add addtional comments using a text area-->
+                <textarea id="textarea" name="additional-comments" rows="10" cols="100">Here is an area for you to type</textarea><br><br>
+
+                <button id="submit">Click on this button to submit!</button><br>
+            </form>
+        </body>
+</html>
