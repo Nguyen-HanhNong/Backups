@@ -1,0 +1,324 @@
+<!--Author: Nguyen-Hanh Nong-->
+<!--Program: Technical Documentation Page-->
+<!--Date of Creation: 4/9/2021-->
+<!--Goal: A program that creates a documentation page of the Java language. -->
+
+<!DOCTYPE html>
+
+<style>
+   
+.nav-unordered-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%; 
+  position: fixed;
+  overflow: auto; 
+
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-list {
+  display: block;
+  color: #000;
+  padding: 40px 50px;
+  text-decoration: none;
+
+  font-size: 30px;
+}
+
+.nav-list:hover {
+  background-color: #555;
+  color: white;
+}
+
+#main-text {
+    position: absolute;
+    left: 500px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.code-parts {
+    width: 100%;
+    color:#555;
+}
+
+@media (min-width: 2000px) {
+    #main-doc {
+        width: 66%; 
+    }
+}
+
+</style>
+
+
+<html>
+    <main id="main-doc">
+            <nav id="navbar">
+
+                <ul class="nav-unordered-list">
+                    <header>
+                        <h1 id="navbar-header">Java Documentation</h1>
+                    </header>
+
+                    <li><a class="nav-list" href=#introduction>Introduction</a></li>
+                    <li><a class="nav-list" href=#WHAT_YOU_SHOULD_KNOW_BEFOREHAND>What you should know beforehand</a></li>
+                    <li><a class="nav-list" href=#JAVA_VS_JAVASCRIPT>Javascript vs Java</a></li>
+                    <li><a class="nav-list" href=#Hello_world>Hello world</a></li>
+                    <li><a class="nav-list" href=#Variables>Variables</a></li>
+                    <li><a class="nav-list" href=#If_Else_Statements>If Else Statements</a></li>
+                    <li><a class="nav-list" href=#Loops>Loops</a></li>
+                </ul>
+            </nav>
+
+                <body id="body">
+                    <div id="main-text">
+                    <section id="introduction" class="main-section">
+                        <header id="introduction_header">
+                            <h1 id="introduction_h1">Introduction</h1>
+                        </header>
+                        <p class="introduction_p">Java is a programming language and computing platform first released by Sun Microsystems in 1995. <br>
+                        There are lots of applications and websites that will not work unless you have Java installed, and more are created every day. <br>
+                        Java is fast, secure, and reliable. From laptops to datacenters, game consoles to scientific supercomputers, <br>
+                        cell phones to the Internet, Java is everywhere!</p>
+
+                        <p class="introduction_p">Java is free, simple, object-oriented, distributed, supports multithreading and offers multimedia and network support. <br>
+                        Java is a mature language, therefore more stable and predictable. The Java Class Library enables cross-platform development. <br>
+                        Being highly popular at enterprise, embedded and network level, Java has a large active user community and support available. <br>
+                        Unlike C and C++, Java programs are compiled independent of platform in bytecodelanguage which allows the same program to run on  <br>
+                        any machine that has a JVM installed. <br>
+                        </p>
+                    </section>
+
+                    <section id="WHAT_YOU_SHOULD_KNOW_BEFOREHAND" class="main-section">
+                        <header id="knowledge_header">
+                            <h1 id="knowledge_h1">What you should know beforehand</h1>
+                        </header>
+
+                        <p class="knowledge_p">There is no need to know any other language or advanced concepts before moving on to Java. But you should know basics of programming.</p>
+
+                        <ul id="knowledge_list">
+                            <li class="knowledge_li">Selection: If-Else logic to choose path or flow of execution.</li>
+                            <li class="knowledge_li">Sequence: Every programming language executes in a sequence. Line 1 will definitely execute before Line 2.</li>
+                            <li class="knowledge_li">Iteration: Loop Concept( While/For etc). To execute same statement/logic multiple times.</li>
+                        </ul>
+
+                        <p class="knowledge_p">Other than that, Java textbooks like Head First Java are very useful to follow along with the guide. You should also understand how to <br>
+                            use an IDE and how to setup an IDE to code in Java. If you do not know, click on <a href="https://www.codecademy.com/articles/what-is-an-ide"> this link here. </a>
+                        </p>
+                    </section>
+
+                    <section id="JAVA_VS_JAVASCRIPT" class="main-section">
+                        <header id="Javascript_vs_Java_header">
+                            <h1 id="Javascript_h1">Java vs Javascript</h1>
+                        </header>
+
+                        <p class="JvJ_p">Both Java and JavaScript are written, assembled and executed differently, and each has dramatic 
+                            differences when it comes to what it is capable of doing. <br>
+
+                            Java is used in a wide range of places, including Android apps, credit card programming and in the creation of 
+                            desktop applications and web enterprise applications. <br> By comparison, JavaScript is mainly used to make web pages more interactive. 
+                            It can be used as an alternative to Flash, though most programmers will tell you that <br> JavaScript is more popular and has more functionality than Flash. 
+                            JavaScript can be used to do neat things like creating animation in HTML. <br>
+                            
+                            In a nutshell, when it comes to how each language is used, Java is typically used for all server side development, 
+                            while JavaScript is reserved for developing <br> client side scripts for functions like validation and interactivity. 
+                            There are some other key differences:</p>
+
+                        <ul id="JvJ_list">
+                            <li class="JvJ_li">Java code must be compiled, and JavaScript code is all-text.</li>
+                            <li class="JvJ_li">Each language requires different plug-ins.</li>
+                            <li class="JvJ_li">JavaScript code is run on a browser only, while Java creates applications that run in a virtual machine or browser.</li>
+                            <li class="JvJ_li">Java is an OOP (object-oriented programming) language, and JavaScript is specifically an OOP scripting language.</li>
+                        </ul>
+                        
+                    </section>
+
+                    <section id="Hello_world" class="main-section">
+                        
+                        <header id="Hello_world_header">
+                            <h1 id="Hello_world_h1">Hello world</h1>
+                        </header>
+
+                        <p class="Hello_world_p">A "Hello, World!" is a simple program that outputs Hello, World! on the screen. <br>
+                            Since it's a very simple program, it's often used as the first program to introduce a new programming language to a newbie
+                        </p>
+
+                        <code id="Hello_world_code">
+                            class HelloWorld { <br>
+                                <blockquote> public static void main(String[] args) { </blockquote>
+                                    <blockquote><blockquote> System.out.println("Hello, World!"); </blockquote></blockquote>
+                                <blockquote>} </blockquote> }
+                        </code>
+
+                        <p class="Hello_world_p">After writing that in your IDE, click the debug button then click the run button. You should see a statement like:
+                            Hello, World! somewhere in a console or in a command prompt line.
+                        </p>
+
+                    </section>
+
+                    <section id="Variables" class="main-section">
+
+                        <header id="Variables_header">
+                            <h1 id="Variables_h1">Variables</h1>
+                        </header>
+
+                        <p class="Variables_p">Variables are containers for storing data values. <br>
+
+                            In Java, there are different types of variables, for example: </p>
+
+                        <ul id="Variables_list">
+                            <li class="Variables_li">String - stores text, such as "Hello". String values are surrounded by double quotes</li>
+                            <li class="Variables_li">int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                            <li class="Variables_li">float - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                            <li class="Variables_li">char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                            <li class="Variables_li">boolean - stores values with two states: true or false</li>
+                        </ul>
+
+                        <p class="Variables_p">To create a variable, you must specify the type and assign it a value: <br>
+                            <code class="code-parts">type variable = value;</code>
+                        </p>
+                    </section>
+
+                    <section id="If_Else_Statements" class="main-section">
+                        
+                        <header id="If_Else_Statements_header">
+                            <h1 id="If_Else_Statements_h1">If Else Statements</h1>
+                        </header>
+
+                        <p class="IF_Else_p">Java supports the usual logical conditions from mathematics:</p>
+
+                        <ul id="IF_Else_list_1">
+                            <li id="IF_Else_li_1">Less than: a < b</li>
+                            <li id="IF_Else_li_1">Less than or equal to: a <= b</li>
+                            <li id="IF_Else_li_1">Greater than: a > b</li>
+                            <li id="IF_Else_li_1">Greater than or equal to: a >= b</li>
+                            <li id="IF_Else_li_1">Equal to a == b</li>
+                            <li id="IF_Else_li_1">Not Equal to: a != b</li>
+                        </ul>
+
+                        <p class="IF_Else_p">You can use these conditions to perform different actions for different decisions. <br>
+                            Java has the following conditional statements:</p>
+                        
+                        <ul id="IF_Else_list_2">
+                            <li id="IF_Else_li_2">Use <code class="code-parts">if </code> to specify a block of code to be executed, if a specified condition is true</li>
+                            <li id="IF_Else_li_2">Use <code class="code-parts">else </code> to specify a block of code to be executed, if the same condition is false</li>
+                        </ul>
+
+                        <p class="IF_Else_p">In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:<br>
+                            <code class="code-parts">
+                                if (20 > 18) { 
+                                <blockquote> System.out.println("20 is greater than 18"); </blockquote>
+                                }
+                            </code>
+                        </p>
+
+                    </section>
+
+                    <section id="Loops" class="main-section">
+                        <header id="Loops_header">
+                            <h1 id="Loops_h1">Loops</h1>
+                        </header>
+
+                        <p class="Loops_p">In programming languages, loops are used to execute a set of instructions/functions <br>
+                            repeatedly when some conditions become true. There are three types of loops in Java.</p>
+
+                        <ul id="Loops_list">
+                            <li class="Loops_li">for loop</li>
+                            <li class="Loops_li">while loop</li>
+                            <li class="Loops_li">do-while loop</li>
+                        </ul>
+
+                        <h2 id="Loops_for_loop">for loop</h2>
+
+                        <p class="Loops_p">The Java for loop is a control flow statement that iterates a part of the programs multiple times. <br>
+                            If the number of iteration is fixed, it is recommended to use for loop. </p>
+                        
+                        <code class="code-parts">	
+                            for(init;condition;incr/decr){  <br>
+                            // code to be executed <br>
+                            }
+                        </code>
+
+                        <p class="Loops_p">Here is an example of a for loop in use. This for loop prints the numbers from 1 to 10.</p>
+
+                        <code class="code-parts">	
+                            //for loop  <br>
+                            for(int i=1;i<=10;i++){  <br>
+                            System.out.println(i);  <br>
+                            }  
+                        </code>
+
+                        <h2 id="Loops_while_loop">while loop</h2>    
+
+                        <p class="Loops_p">The Java while loop is a control flow statement that executes a part of the programs repeatedly on the basis of <br>
+                            given boolean condition. If the number of iteration is not fixed, it is recommended to use while loop. </p>
+                        
+                        <code class="code-parts">	
+                            while(condition) {  <br>
+                                //code to be executed <br> 
+                            }
+                        </code>
+
+                        <p class="Loops_p">Here is an example of a for loop in use. This while loop prints the numbers from 1 to 10.</p>
+
+                        <code class="code-parts">	
+                            //while loop  <br>
+                            int i=1; <br>
+                            while(i<=10){  <br>
+                                System.out.println(i);  <br>
+                                i++;  <br>
+                            }  
+                        </code>
+
+                        <h2 id="Loops_do_while_loop">do-while loop</h2>    
+
+                        <p class="Loops_p">The Java do while loop is a control flow statement that executes a part of the programs at least once and <br>
+                            the further execution depends upon the given boolean condition. If the number of iteration is not fixed and you must have <br>
+                            to execute the loop at least once, it is recommended to use the do-while loop. </p>
+                        
+                        <code class="code-parts">	
+                            do{  <br>
+                                //code to be executed  <br>
+                            }while(condition); <br>
+                        </code>
+
+                        <p class="Loops_p">Here is an example of a for loop in use. This do-while loop prints the numbers from 1 to 10.</p>
+
+                        <code class="code-parts">	
+                            //do-while loop <br>  
+                            int i=1; <br> 
+                            do{  <br>
+                                System.out.println(i);  <br>
+                                i++;  <br>
+                            }while(i<=10); 
+                        </code>
+
+                    </section>
+
+                    <section id="references" class="main-section">
+                        <header id="reference_header">
+                            <h1 id="reference_h1">References</h1>
+                        </header>
+
+                        <ul id="reference-list">
+                            <li class="reference_li"><a href="https://www.youth4work.com/Talent/Core-Java/Forum/122263-why-java-is-unique-than-other-languages#:~:text=Java%20is%20free%2C%20simple%2C%20object,Library%20enables%20cross%2Dplatform%20development">Youth4Work</a></li>
+                            <li class="reference_li"><a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Wikipedia Article - Java</a></li>
+                            <li class="reference_li"><a href="https://www.thesoftwareguild.com/faq/difference-between-java-and-javascript/">Software Guild - Primary Differences Between Java and JavaScript</a></li>
+                            <li class="reference_li"><a href="https://www.w3schools.com/java/java_variables.asp#:~:text=Variables%20are%20containers%20for%20storing,such%20as%20123%20or%20%2D123">W3Schools - Java Variables</a></li>
+                            <li class="reference_li"><a href="https://www.w3schools.com/java/java_conditions.asp">W3Schools - Java If... Else</a></li>
+                            <li class="reference_li"><a href="https://www.javatpoint.com/java-for-loop">JavaTPoint - Loops in Java</a></li>
+                        </ul>
+                    </section>
+              
+            </body>
+            
+            <footer>Copyright, Nguyen-Hanh Nong 2021</footer>
+    </main>
+
+</html>
